@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Inicial</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div class="registro">
+        <div class="field">
+            <label for="codaluno">Código do Aluno:</label>
+            <input type="number" name="codAluno" id="codAluno">
+        </div>
+        
+        <div class="field">
+            <label for="codaluno">Nome do Aluno:</label>
+            <input type="text" name="nomeAluno" id="nomeAluno">
+        </div>
+
+        <div class="field">
+            <label for="categoria">Categoria:</label>
+            <select name="categoria" id="categoria">
+                <option value="1">Fundamental</option>
+                <option value="2">Médio</option>
+            </select>
+        </div>
+
+        <button id="enviar">Enviar</button>
+
+    </div>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>
