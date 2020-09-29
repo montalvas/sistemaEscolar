@@ -18,9 +18,17 @@ window.onload = () => {
 
 
     document.getElementById('enviar').addEventListener('click', () => {
-        let codAluno = document.getElementById('codAluno').value;
+        /*let codAluno = document.getElementById('codAluno').value;
         let nomeAluno = document.getElementById('nomeAluno').value;
         let serie = grau.options[grau.selectedIndex].text;
-        console.log(codAluno, nomeAluno, serie);
+        let n1 = document.getElementById('n1').value;*/
+        let colection = document.getElementsByName('nota');
+        let notas = [];
+        
+        for (let i = 0; i < 6; i++) {
+            notas.push(colection[i].value);
+        }
+        console.log(notas);
+        
     })
 }
