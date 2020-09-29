@@ -1,4 +1,5 @@
 window.onload = () => {
+    let alunos = [];
     let cat = document.getElementById('categoria');
     let grau = document.getElementById('grau');
     cat.addEventListener('change', () => {
@@ -18,17 +19,20 @@ window.onload = () => {
 
 
     document.getElementById('enviar').addEventListener('click', () => {
-        /*let codAluno = document.getElementById('codAluno').value;
+        let codAluno = Number(document.getElementById('codAluno').value);
         let nomeAluno = document.getElementById('nomeAluno').value;
         let serie = grau.options[grau.selectedIndex].text;
-        let n1 = document.getElementById('n1').value;*/
         let colection = document.getElementsByName('nota');
         let notas = [];
+        let media = 0;
         
         for (let i = 0; i < 6; i++) {
-            notas.push(colection[i].value);
+            if (colection[i].value === "") {colection[i].value = 0};
+            notas.push(Number(colection[i].value));
+            media += Number(colection[i].value);
         }
-        console.log(notas);
-        
+        media /= 6;
+        alunos.push({codAluno, nomeAluno, serie, notas, media});
+        console.log(alunos);
     })
 }
